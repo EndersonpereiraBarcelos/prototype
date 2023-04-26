@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
 import uuid
 
 
@@ -53,7 +52,6 @@ class FundoImobiliario(models.Model):
     null=False,
     blank=False,
     default=0)
-  
   
 class LavaJato(models.Model):
   SETOR_CHOICES = [

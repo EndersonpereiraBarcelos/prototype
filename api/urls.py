@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from api.views import FundoImobiliarioViewSet, LavaJatoViewSet
+from api.views import FundoImobiliarioViewSet, LavaJatoViewdSet
 
 
 app_name = 'api'
@@ -10,9 +10,9 @@ router.register(r'fundos', FundoImobiliarioViewSet)
 urlpatterns = router.urls
 
 
-app_name = 'lavajato'
+
+app_name = 'api'
 
 router = DefaultRouter(trailing_slash=False)
-router.register(r'lavajato', LavaJatoViewSet)
-
+router.register(r'lavajato',LavaJatoViewdSet)
 urlpatterns = router.urls
