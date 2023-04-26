@@ -53,3 +53,32 @@ class FundoImobiliario(models.Model):
     null=False,
     blank=False,
     default=0)
+  
+  
+class LavaJato(models.Model):
+  SETOR_CHOICES = [
+    ('Concerto', 'concerto'),('lavagem completo', 'Lavagem Completo'),
+    ('Lavagem + Cera', 'lavagem + cera')
+  ]
+
+  id = models.UUIDField(
+    primary_key=True,
+    default=uuid.uuid4,
+    null=False,
+    blank=True)
+
+  Nome = models.CharField(
+    max_length=8,
+    null=False,
+    blank=False)
+
+  Serviço = models.CharField(
+    max_length=30,
+    null=False,
+    blank=False,
+    choices=SETOR_CHOICES)
+  
+  Funcionario = models.CharField(
+    max_length=8,
+    null=False,
+    blank=False)
